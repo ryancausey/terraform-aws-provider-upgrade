@@ -19,4 +19,4 @@ https://github.com/renovatebot/renovate/discussions/30984
 
 The debug log file is included in [renovate_debug_log.txt](renovate_debug_log.txt).
 
-The MR that is open that shows the issue can be seen [here](https://gitlab.com/rccausey/terraform-aws-provider-upgrade/-/merge_requests/1).
+The PR that is open that shows the issue can be seen [here](https://github.com/ryancausey/terraform-aws-provider-upgrade/pull/1).
