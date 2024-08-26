@@ -1,0 +1,497 @@
+Running with gitlab-runner 17.0.0~pre.88.g761ae5dd (761ae5dd)
+  on green-1.saas-linux-small-amd64.runners-manager.gitlab.com/default JLgUopmM, system ID: s_deaa2ca09de7
+Resolving secrets
+Preparing the "docker+machine" executor 00:27
+Using Docker executor with image ghcr.io/renovatebot/renovate:38.52.3@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 ...
+Pulling docker image ghcr.io/renovatebot/renovate:38.52.3@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 ...
+Using docker image sha256:68d063f2603c44d1f840952adc0429749bbc54a24c58de0da9fa6d54bfe552de for ghcr.io/renovatebot/renovate:38.52.3@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 with digest ghcr.io/renovatebot/renovate@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 ...
+Preparing environment 00:07
+Running on runner-jlguopmm-project-45871962-concurrent-0 via runner-jlguopmm-s-l-s-amd64-1724644636-edd4d4e2...
+Getting source from Git repository 00:01
+Fetching changes with git depth set to 20...
+Initialized empty Git repository in /builds/munipal-oss/renovate-project/.git/
+Created fresh repository.
+Checking out d379c479 as detached HEAD (ref is master)...
+Skipping Git submodules setup
+$ git remote set-url origin "${CI_REPOSITORY_URL}"
+Restoring cache 00:01
+Checking cache for master-renovate-protected...
+Downloading cache from https://storage.googleapis.com/gitlab-com-runners-cache/project/45871962/master-renovate-protected
+Successfully extracted cache
+Executing "step_script" stage of the job script 00:10
+Using docker image sha256:68d063f2603c44d1f840952adc0429749bbc54a24c58de0da9fa6d54bfe552de for ghcr.io/renovatebot/renovate:38.52.3@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 with digest ghcr.io/renovatebot/renovate@sha256:daa9c61aaeae5a3dde576f0ae1142878cde44dae8ff86ba6aa4c4b047f75bdf9 ...
+$ renovate $RENOVATE_EXTRA_FLAGS
+DEBUG: Using RE2 regex engine
+DEBUG: Parsing configs
+DEBUG: Checking for config file in config.js
+DEBUG: No config file found on disk - skipping
+DEBUG: Converting GITHUB_COM_TOKEN into a global host rule
+DEBUG: File config
+       "config": {}
+DEBUG: CLI config
+       "config": {"repositories": ["rccausey/terraform-aws-provider-upgrade"]}
+DEBUG: Env config
+       "config": {
+         "hostRules": [
+           {"hostType": "github", "matchHost": "github.com", "token": "***********"}
+         ],
+         "repositoryCache": "enabled",
+         "baseDir": "/builds/munipal-oss/renovate-project/renovate",
+         "onboardingConfig": {
+           "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+           "extends": ["config:recommended"]
+         },
+         "optimizeForDisabled": true,
+         "platform": "gitlab",
+         "endpoint": "https://gitlab.com/api/v4",
+         "token": "***********"
+       }
+DEBUG: Combined config
+       "config": {
+         "hostRules": [
+           {"hostType": "github", "matchHost": "github.com", "token": "***********"}
+         ],
+         "repositoryCache": "enabled",
+         "baseDir": "/builds/munipal-oss/renovate-project/renovate",
+         "onboardingConfig": {
+           "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+           "extends": ["config:recommended"]
+         },
+         "optimizeForDisabled": true,
+         "platform": "gitlab",
+         "endpoint": "https://gitlab.com/api/v4",
+         "token": "***********",
+         "repositories": ["rccausey/terraform-aws-provider-upgrade"]
+       }
+DEBUG: Adding trailing slash to endpoint
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Enabling onboardingNoDeps while in non-autodiscover mode
+DEBUG: Found valid git version: 2.46.0
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+DEBUG: hostRules: authentication already set for gitlab.com
+DEBUG: Using queue: host=gitlab.com, concurrency=16
+DEBUG: GitLab version is: 17.4.0-pre
+DEBUG: Using platform gitAuthor: Ryan Causey <ryan.causey@munipal.io>
+DEBUG: Adding token authentication for gitlab.com (hostType=gitlab) to hostRules
+DEBUG: Using configured baseDir: /builds/munipal-oss/renovate-project/renovate
+DEBUG: Using cacheDir: /builds/munipal-oss/renovate-project/renovate/cache
+DEBUG: Using containerbaseDir: /builds/munipal-oss/renovate-project/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /builds/munipal-oss/renovate-project/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+DEBUG: Adding token authentication for gitlab.com (hostType=gitlab) to hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+DEBUG: Adding token authentication for github.com (hostType=github) to hostRules
+DEBUG: Adding token authentication for gitlab.com (hostType=gitlab) to hostRules
+ INFO: Repository started (repository=rccausey/terraform-aws-provider-upgrade)
+       "renovateVersion": "38.52.3"
+DEBUG: Using localDir: /builds/munipal-oss/renovate-project/renovate/repos/gitlab/rccausey/terraform-aws-provider-upgrade (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: hostRules: applying Bearer authentication for gitlab.com (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Using queue: host=gitlab.com, concurrency=16 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: rccausey/terraform-aws-provider-upgrade default branch = main (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Enabling Git FS (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Using http URL: https://gitlab.com/rccausey/terraform-aws-provider-upgrade.git (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Repository cache is restored from revision 13 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Resetting npmrc (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Resetting npmrc (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: checkOnboarding() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: isOnboarded() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: findPr(renovate/configure, Configure Renovate, !open) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: findPr(renovate/configure, chore: Configure Renovate, !open) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Checking cached config file name (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Existing config file confirmed (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Repository config (repository=rccausey/terraform-aws-provider-upgrade)
+       "fileName": "renovate.json",
+       "config": {}
+DEBUG: Repo is onboarded (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: migrateAndValidate() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: No config migration necessary (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Found repo ignorePaths (repository=rccausey/terraform-aws-provider-upgrade)
+       "ignorePaths": ["**/node_modules/**", "**/bower_components/**"]
+DEBUG: No vulnerability alerts found (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: No baseBranches (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: extract() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Cached extract for sha=a20f39d8fa564d8f2c48b6b52d78bb8b33b28cea is valid and can be used (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Deleted cached dep updates (repository=rccausey/terraform-aws-provider-upgrade)
+ INFO: Dependency extraction complete (repository=rccausey/terraform-aws-provider-upgrade, baseBranch=main)
+       "stats": {
+         "managers": {"terraform": {"fileCount": 1, "depCount": 2}},
+         "total": {"fileCount": 1, "depCount": 2}
+       }
+DEBUG: hostRules: no authentication for registry.terraform.io (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Using queue: host=registry.terraform.io, concurrency=16 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=rccausey/terraform-aws-provider-upgrade, baseBranch=main)
+DEBUG: Package releases lookups complete (repository=rccausey/terraform-aws-provider-upgrade, baseBranch=main)
+DEBUG: branchifyUpgrades (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: detectSemanticCommits() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: 1 flattened updates found: aws (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Returning 1 branch(es) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: config.repoIsOnboarded=true (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: packageFiles with updates (repository=rccausey/terraform-aws-provider-upgrade, baseBranch=main)
+       "config": {
+         "terraform": [
+           {
+             "deps": [
+               {
+                 "currentValue": "5.63.1",
+                 "currentVersion": "5.63.1",
+                 "datasource": "terraform-provider",
+                 "depName": "aws",
+                 "depType": "required_provider",
+                 "fixedVersion": "5.63.1",
+                 "homepage": "https://registry.terraform.io/providers/hashicorp/aws",
+                 "isSingleVersion": true,
+                 "lockedVersion": "5.63.1",
+                 "packageName": "hashicorp/aws",
+                 "registryUrl": "https://registry.terraform.io",
+                 "sourceUrl": "https://github.com/hashicorp/terraform-provider-aws",
+                 "versioning": "hashicorp",
+                 "warnings": [],
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "5.64.0",
+                     "newValue": "5.64.0",
+                     "releaseTimestamp": "2024-08-22T20:09:44.000Z",
+                     "newMajor": 5,
+                     "newMinor": 64,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "branchName": "renovate/aws-5.x"
+                   }
+                 ]
+               },
+               {
+                 "datasource": "terraform-provider",
+                 "depName": "aws",
+                 "depType": "provider",
+                 "lockedVersion": "5.63.1",
+                 "packageName": "hashicorp/aws",
+                 "skipReason": "unspecified-version",
+                 "updates": []
+               }
+             ],
+             "packageFile": "main.tf"
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: processRepo() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Processing 1 branch: renovate/aws-5.x (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculating hourly PRs remaining (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: currentHourStart=2024-08-26T03:00:00.000+00:00 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PR hourly limit remaining: 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculating prConcurrentLimit (10) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: getBranchPr(renovate/aws-5.x) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: findPr(renovate/aws-5.x, undefined, open) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: 0 PRs are currently open (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PR concurrent limit remaining: 10 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculated maximum PRs remaining this run: 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PullRequests limit = 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculating hourly PRs remaining (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: currentHourStart=2024-08-26T03:00:00.000+00:00 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PR hourly limit remaining: 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculating branchConcurrentLimit (10) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: 0 already existing branches found:  (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Branch concurrent limit remaining: 10 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Calculated maximum branches remaining this run: 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Branches limit = 2 (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: syncBranchState() (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: getBranchPr(renovate/aws-5.x) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: findPr(renovate/aws-5.x, undefined, open) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: branchExists=false (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: dependencyDashboardCheck=undefined (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Check for closed PR because recreating closed PRs is disabled. (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: findPr(renovate/aws-5.x, Update Terraform aws to v5.64.0, !open) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: prAlreadyExisted=false (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Checking schedule(schedule=at any time, tz=null, now=2024-08-26T03:58:38.155Z) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: No schedule defined (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Branch needs creating (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Using reuseExistingBranch: false (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Setting current branch to main (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Initializing git repository into /builds/munipal-oss/renovate-project/renovate/repos/gitlab/rccausey/terraform-aws-provider-upgrade (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Performing blobless clone (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: git clone completed (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "durationMs": 902
+DEBUG: latest repository commit (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "latestCommit": {
+         "hash": "a20f39d8fa564d8f2c48b6b52d78bb8b33b28cea",
+         "date": "2024-08-25T20:52:47-07:00",
+         "message": "initial commit",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": "Ryan Causey",
+         "author_email": "ryan.causey@munipal.io"
+       }
+DEBUG: latest commit (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-08-25T20:52:47-07:00"
+DEBUG: manager.getUpdatedPackageFiles() reuseExistingBranch=false (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Starting search at index 188 (repository=rccausey/terraform-aws-provider-upgrade, packageFile=main.tf, branch=renovate/aws-5.x)
+       "depName": "aws"
+DEBUG: Found match at index 188 (repository=rccausey/terraform-aws-provider-upgrade, packageFile=main.tf, branch=renovate/aws-5.x)
+       "depName": "aws"
+DEBUG: Contents updated (repository=rccausey/terraform-aws-provider-upgrade, packageFile=main.tf, branch=renovate/aws-5.x)
+       "depName": "aws"
+DEBUG: updateArtifacts for updatedPackageFiles (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: terraform.updateArtifacts(main.tf) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Updating constraint "5.63.1" to replace "5.63.1" with "5.64.0" for "hashicorp/aws" (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: GET https://registry.terraform.io/v1/providers/hashicorp/aws/5.64.0/download/linux/amd64 = (code=ERR_NON_2XX_3XX_RESPONSE, statusCode=404 retryCount=0, duration=14) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Failed to retrieve build (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "err": {
+         "name": "HTTPError",
+         "code": "ERR_NON_2XX_3XX_RESPONSE",
+         "timings": {
+           "start": 1724644719293,
+           "socket": 1724644719293,
+           "lookup": 1724644719293,
+           "connect": 1724644719293,
+           "secureConnect": 1724644719293,
+           "upload": 1724644719293,
+           "response": 1724644719307,
+           "end": 1724644719307,
+           "phases": {
+             "wait": 0,
+             "dns": 0,
+             "tcp": 0,
+             "tls": 0,
+             "request": 0,
+             "firstByte": 14,
+             "download": 0,
+             "total": 14
+           }
+         },
+         "message": "Response code 404 (Not Found)",
+         "stack": "HTTPError: Response code 404 (Not Found)\n    at Request.<anonymous> (/usr/local/renovate/node_modules/.pnpm/got@11.8.6/node_modules/got/dist/source/as-promise/index.js:118:42)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)",
+         "options": {
+           "headers": {
+             "user-agent": "RenovateBot/38.52.3 (https://github.com/renovatebot/renovate)",
+             "accept": "application/json",
+             "accept-encoding": "gzip, deflate, br"
+           },
+           "url": "https://registry.terraform.io/v1/providers/hashicorp/aws/5.64.0/download/linux/amd64",
+           "hostType": "terraform-provider",
+           "username": "",
+           "password": "",
+           "method": "GET",
+           "http2": false
+         },
+         "response": {
+           "statusCode": 404,
+           "statusMessage": "Not Found",
+           "body": {"errors": ["Not Found"]},
+           "headers": {
+             "content-type": "application/json",
+             "content-length": "48",
+             "connection": "keep-alive",
+             "date": "Thu, 22 Aug 2024 20:31:55 GMT",
+             "cache-control": "public, max-age=604800, stale-if-error=31536000",
+             "content-encoding": "gzip",
+             "last-modified": "Thu, 22 Aug 2024 20:09:45 GMT",
+             "server": "terraform-registry/df51432cb523a054c60f3cab8ebbf2073c68d999",
+             "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+             "vary": "Accept-Encoding,X-Terraform-Version",
+             "x-cache": "Error from cloudfront",
+             "via": "1.1 31341771a4bfa40d7b1f61883ffb56c6.cloudfront.net (CloudFront)",
+             "x-amz-cf-pop": "IAD12-P1",
+             "x-amz-cf-id": "PzAxHxg_Ek_MZz2SuBXOwBa9cyO4LBku_cUY1dLD1fbJjGlTwiA3mA==",
+             "age": "286004"
+           },
+           "httpVersion": "1.1",
+           "retryCount": 0
+         }
+       },
+       "url": "https://registry.terraform.io/v1/providers/hashicorp/aws/5.64.0/download/linux/amd64"
+DEBUG: Updated 1 package files (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: No updated lock files in branch (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: 1 file(s) to commit (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Preparing files for committing to branch renovate/aws-5.x (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Setting git author name: Ryan Causey (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Setting git author email: ryan.causey@munipal.io (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: git commit (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "deletedFiles": [],
+       "ignoredFiles": [],
+       "result": {
+         "author": null,
+         "branch": "renovate/aws-5.x",
+         "commit": "a825d773a45d2e7f43bf2c9f400f11753ed717ab",
+         "root": false,
+         "summary": {"changes": 1, "insertions": 1, "deletions": 1}
+       }
+DEBUG: Pushing refSpec renovate/aws-5.x:renovate/aws-5.x (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: git push (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "result": {
+         "pushed": [
+           {
+             "deleted": false,
+             "tag": false,
+             "branch": true,
+             "new": true,
+             "alreadyUpdated": false,
+             "local": "refs/heads/renovate/aws-5.x",
+             "remote": "refs/heads/renovate/aws-5.x"
+           }
+         ],
+         "ref": {"local": "refs/remotes/origin/renovate/aws-5.x"},
+         "remoteMessages": {
+           "all": [
+             "To create a merge request for renovate/aws-5.x, visit:",
+             "https://gitlab.com/rccausey/terraform-aws-provider-upgrade/-/merge_requests/new?merge_request%5Bsource_branch%5D=renovate%2Faws-5.x"
+           ],
+           "pullRequestUrl": "https://gitlab.com/rccausey/terraform-aws-provider-upgrade/-/merge_requests/new?merge_request%5Bsource_branch%5D=renovate%2Faws-5.x"
+         }
+       }
+DEBUG: Setting current branch to main (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: latest commit (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "branchName": "main",
+       "latestCommitDate": "2024-08-25T20:52:47-07:00"
+ INFO: Branch created (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "commitSha": "a825d773a45d2e7f43bf2c9f400f11753ed717ab"
+DEBUG: Ensuring PR (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: There are 0 errors and 0 warnings (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: getBranchPr(renovate/aws-5.x) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: findPr(renovate/aws-5.x, undefined, open) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Fetching changelog: https://github.com/hashicorp/terraform-provider-aws (5.63.1 -> 5.64.0) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: hostRules: authentication already set for api.github.com (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Using queue: host=api.github.com, concurrency=16 (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Creating PR (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "prTitle": "Update Terraform aws to v5.64.0"
+DEBUG: Creating Merge Request: Update Terraform aws to v5.64.0 (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+ INFO: PR created (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+       "pr": 1,
+       "prTitle": "Update Terraform aws to v5.64.0"
+DEBUG: addParticipants(pr=1) (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: setPrCache() (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: Created Pull Request #1 (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: PR is not configured for automerge (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: setBranchCommit() (repository=rccausey/terraform-aws-provider-upgrade, branch=renovate/aws-5.x)
+DEBUG: getBranchPr(renovate/aws-5.x) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: findPr(renovate/aws-5.x, undefined, open) (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: ensureDependencyDashboard() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Closing Dependency Dashboard (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: ensureIssueClosing() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: validateReconfigureBranch() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: No reconfigure branch found (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Removing any stale branches (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: config.repoIsOnboarded=true (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Branch lists (repository=rccausey/terraform-aws-provider-upgrade)
+       "branchList": ["renovate/aws-5.x"],
+       "renovateBranches": ["renovate/aws-5.x"]
+DEBUG: remainingBranches= (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: No branches to clean up (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: ensureIssueClosing() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: ensureIssueClosing() (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Branch summary (repository=rccausey/terraform-aws-provider-upgrade)
+       "cacheModified": true,
+       "baseBranches": [{"branchName": "main", "sha": "a20f39d8fa564d8f2c48b6b52d78bb8b33b28cea"}],
+       "branches": [
+         {
+           "automerge": false,
+           "baseBranch": "main",
+           "baseBranchSha": "a20f39d8fa564d8f2c48b6b52d78bb8b33b28cea",
+           "branchName": "renovate/aws-5.x",
+           "branchSha": "a825d773a45d2e7f43bf2c9f400f11753ed717ab",
+           "isModified": false,
+           "isPristine": true
+         }
+       ],
+       "defaultBranch": "main",
+       "inactiveBranches": []
+DEBUG: branches info extended (repository=rccausey/terraform-aws-provider-upgrade)
+       "branchesInformation": [
+         {
+           "branchName": "renovate/aws-5.x",
+           "prNo": null,
+           "prTitle": "Update Terraform aws to v5.64.0",
+           "result": "pr-created",
+           "upgrades": [
+             {
+               "datasource": "terraform-provider",
+               "depName": "aws",
+               "displayPending": "",
+               "fixedVersion": "5.63.1",
+               "currentVersion": "5.63.1",
+               "currentValue": "5.63.1",
+               "newValue": "5.64.0",
+               "newVersion": "5.64.0",
+               "packageFile": "main.tf",
+               "updateType": "minor",
+               "packageName": "hashicorp/aws"
+             }
+           ]
+         }
+       ]
+DEBUG: Renovate repository PR statistics (repository=rccausey/terraform-aws-provider-upgrade)
+       "stats": {"total": 1, "open": 0, "closed": 0, "merged": 0}
+DEBUG: Repository result: done, status: onboarded, enabled: true, onboarded: true (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Repository timing splits (milliseconds) (repository=rccausey/terraform-aws-provider-upgrade)
+       "splits": {"init": 742, "extract": 62, "lookup": 480, "onboarding": 1, "update": 6385},
+       "total": 7825
+DEBUG: Package cache statistics (repository=rccausey/terraform-aws-provider-upgrade)
+       "get": {"count": 9, "avgMs": 1, "medianMs": 1, "maxMs": 5, "totalMs": 10},
+       "set": {"count": 9, "avgMs": 17, "medianMs": 4, "maxMs": 112, "totalMs": 157}
+DEBUG: HTTP statistics (repository=rccausey/terraform-aws-provider-upgrade)
+       "hosts": {
+         "api.github.com": {
+           "count": 10,
+           "reqAvgMs": 292,
+           "reqMedianMs": 305,
+           "reqMaxMs": 622,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         },
+         "gitlab.com": {
+           "count": 5,
+           "reqAvgMs": 240,
+           "reqMedianMs": 139,
+           "reqMaxMs": 675,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         },
+         "registry.terraform.io": {
+           "count": 17,
+           "reqAvgMs": 39,
+           "reqMedianMs": 15,
+           "reqMaxMs": 284,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         }
+       },
+       "requests": 32
+DEBUG: HTTP cache statistics (repository=rccausey/terraform-aws-provider-upgrade)
+DEBUG: Lookup statistics (repository=rccausey/terraform-aws-provider-upgrade)
+       "terraform-provider": {"count": 1, "avgMs": 441, "medianMs": 441, "maxMs": 441, "totalMs": 441}
+ INFO: Repository finished (repository=rccausey/terraform-aws-provider-upgrade)
+       "cloned": true,
+       "durationMs": 7825
+DEBUG: Checking file package cache for expired items
+DEBUG: Deleted 0 of 9 file cached entries in 12ms
+Saving cache for successful job 00:01
+Creating cache master-renovate-protected...
+renovate/cache/renovate/repository/: found 9 matching artifact files and directories
+Temporary file: ../../../cache/munipal-oss/renovate-project/master-renovate-protected/archive_3449262093
+Uploading cache.zip to https://storage.googleapis.com/gitlab-com-runners-cache/project/45871962/master-renovate-protected
+Created cache
+Uploading artifacts for successful job 00:03
+Uploading artifacts...
+renovate-log.ndjson: found 1 matching artifact files and directories
+Trying to load /builds/munipal-oss/renovate-project.tmp/CI_SERVER_TLS_CA_FILE ...
+Dialing: tcp us-east1-c.ci-gateway.int.gprd.gitlab.net:8989 ...
+WARNING: Upload request redirected                  location=https://gitlab.com/api/v4/jobs/7663318840/artifacts?artifact_format=zip&artifact_type=archive&expire_in=1d new-url=https://gitlab.com
+WARNING: Retrying...                                context=artifacts-uploader error=request redirected
+Trying to load /builds/munipal-oss/renovate-project.tmp/CI_SERVER_TLS_CA_FILE ...
+Dialing: tcp gitlab.com:443 ...
+Uploading artifacts as "archive" to coordinator... 201 Created  id=7663318840 responseStatus=201 Created token=glcbt-66
+Cleaning up project directory and file based variables 00:00
+Job succeeded
